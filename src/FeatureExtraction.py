@@ -93,7 +93,7 @@ def getFeatureDict(mode) :
     #    print word
     return feature_dict
 
-
+"""
 def parseDict(line) :
     ls = line.split(' ')
     ret = {}
@@ -103,6 +103,7 @@ def parseDict(line) :
     ret['istm'] = ls[4].split('=')[1]
     ret['polarity'] = ls[5].split('=')[1]
     return ret
+"""
 if __name__ == '__main__':
     wordnet_lemmatizer = WordNetLemmatizer()
     English_tokenizer = lambda x : [wordnet_lemmatizer.lemmatize(word).lower() for word in nltk.word_tokenize(x)]
@@ -116,8 +117,8 @@ if __name__ == '__main__':
     print len(Enlgish_Dict)
     """
 
-    #getWordsCountFile(mode='cn', tokenizer=Chinese_tokenizer)
-    #getWordsCountFile(mode='en', tokenizer=English_tokenizer)
+    getWordsCountFile(mode='cn', tokenizer=Chinese_tokenizer)
+    getWordsCountFile(mode='en', tokenizer=English_tokenizer)
     Chinese_Dict = getFeatureDict(mode='cn')
     English_Dict = getFeatureDict(mode='en')
     print len(Chinese_Dict)

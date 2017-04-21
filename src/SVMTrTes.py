@@ -1,3 +1,4 @@
+
 #coding=utf-8
 #-*- coding: UTF-8 -*- 
 import sys
@@ -228,7 +229,7 @@ def coTraining() :
     ignore_mark = True
     ignore_num  = int(sys.argv[2])#500
 
-    while True :
+    for I__I__I in range(300) :
         output_i = []
         #print len(en_Datas_train), len(cn_Datas_train)
         #print len(en_unlabeled),   len(cn_unlabeled)
@@ -262,52 +263,50 @@ def coTraining() :
 
 
         result_unlab_en = clf_en.predict(x_unlab_en)
-        #max_t, min_t = max(result_unlab_en), min(result_unlab_en)
-        #result_unlab_en = [x / max_t if x > 0 else -x / min_t for x in result_unlab_en]
-
         result_unlab_cn = clf_cn.predict(x_unlab_cn)
-        #max_t, min_t = max(result_unlab_cn), min(result_unlab_cn)
-        #result_unlab_cn = [x / max_t if x > 0 else -x / min_t for x in result_unlab_cn]
 
-        all_score = [result_unlab_en[i]+result_unlab_cn[i] for i in range(len(result_unlab_en))]
         #bound_n = int(0.005*len(result_unlab_en))
         bound_n = int(sys.argv[3])#100
-        #en_score = [abs(result_unlab_en[i]) for i in range(len(result_unlab_en))]
-        #bound_en = sorted(en_score, reverse=True)[bound_n]
-        #cn_score = [abs(result_unlab_cn[i]) for i in range(len(result_unlab_cn))]
-        #bound_cn = sorted(cn_score, reverse=True)[bound_n]
-        #print bound_en, bound_cn
+
         if ignore_mark :
             ignore_mark = False
-            bound_ignore = sorted(all_score, reverse=True)[ignore_num]
-            ignore_id = [i for i in range(len(all_score)) if all_score[i]>bound_ignore]
+            bound_ignore_en = sorted(result_unlab_en, reverse=True)[ignore_num]
+            bound_ignore_cn = sorted(result_unlab_cn, reverse=True)[ignore_num]
+            #ignore_id = [i for i in range(len(all_score)) if all_score[i]>bound_ignore]
+            #all_score
+            ignore_id = [i for i in range(len(result_unlab_en)) if np.array([result_unlab_en[i]>bound_ignore_en, result_unlab_cn[i]>bound_ignore_cn]).any()]
             en_unlabeled = [en_unlabeled[i] for i in range(len(en_unlabeled)) if not i in ignore_id]
             cn_unlabeled = [cn_unlabeled[i] for i in range(len(cn_unlabeled)) if not i in ignore_id]
             #print bound_ignore
-            output_i += [bound_ignore]
+            output_i += [bound_ignore_en, bound_ignore_cn]
             output.write(list2line(output_i, split=u'\t')+'\n')
             output.flush()
             #print ''
             continue
         #"""
-        bound_all = sorted(all_score, reverse=True)[bound_n]
+        #bound_all = sorted(all_score, reverse=True)[bound_n]
+        bound_en = sorted(result_unlab_en, reverse=True)[bound_n]
+        bound_cn = sorted(result_unlab_cn, reverse=True)[bound_n]
         #print bound_all
-        output_i += [bound_all]
+        output_i += [bound_en, bound_cn]
 
 
-        used_id = [i for i in range(len(all_score)) if all_score[i]>bound_all]
+        #used_id = [i for i in range(len(all_score)) if all_score[i]>bound_all]
+        used_id_en = [i for i in range(len(result_unlab_en)) if result_unlab_en[i]>bound_en]
+        used_id_cn = [i for i in range(len(result_unlab_cn)) if result_unlab_cn[i]>bound_cn]
         #"""
         #print len(used_id)
-        output_i += [len(used_id)]
-
-        for i in used_id :
-            en_unlabeled[i]['label'] = 1 if all_score[i] > 0 else -1
-            cn_unlabeled[i]['label'] = 1 if all_score[i] > 0 else -1
+        #output_i += [len(used_id)]
+        output_i += [len(used_id_en), len(used_id_cn)]
+        for i in used_id_en :
+            en_unlabeled[i]['label'] = 1 if result_unlab_en[i] > 0 else -1
             en_Datas_train.append(en_unlabeled[i])
+        for i in used_id_cn :
+            cn_unlabeled[i]['label'] = 1 if result_unlab_cn[i] > 0 else -1
             cn_Datas_train.append(cn_unlabeled[i])
 
-        en_unlabeled = [en_unlabeled[i] for i in range(len(en_unlabeled)) if not i in used_id]
-        cn_unlabeled = [cn_unlabeled[i] for i in range(len(cn_unlabeled)) if not i in used_id]
+        en_unlabeled = [en_unlabeled[i] for i in range(len(en_unlabeled)) if not i in used_id_en]
+        cn_unlabeled = [cn_unlabeled[i] for i in range(len(cn_unlabeled)) if not i in used_id_cn]
 
         #print ''
         output.write(list2line(output_i, split=u'\t')+'\n')

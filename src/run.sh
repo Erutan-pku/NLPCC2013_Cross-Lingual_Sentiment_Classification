@@ -19,3 +19,8 @@ python SVMTrTe.py result_1000_25 1000 25 &
 python SVMTrTe.py result_2000_200 2000 200 &
 python SVMTrTe.py result_2000_50 2000 50 &
 python SVMTrTe.py result_2000_25 2000 25 &
+
+python SVMTrTe.py result_150_25 150 25 &
+python SVMTrTe.py result_150_50 150 50 &
+python SVMTrTe.py result_150_100 150 100 &
+python SVMTrTe.py result_150_200 150 200 &
