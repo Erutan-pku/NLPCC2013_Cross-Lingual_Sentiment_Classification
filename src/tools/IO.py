@@ -77,15 +77,24 @@ class W2V :
 # not finished
 #counter
 class Counter :
-    count_hash = {}
-    def __init__(self, dict_in={}, listStart=1) :
-        assert type(dict_in) in [list, dict]
-        if type(dict_in) is dict :
-            self.count_hash = dict_in
-        elif type(dict_in) is list :
+    def __init__(self, dict_in=None, listStart=1) :
+        if dict_in is None :
             self.count_hash = {}
-            for i, num in enumerate(dict_in) :
-                self.count_hash[i + listStart] = num
+        else :
+            assert type(dict_in) in [list, dict]
+            if type(dict_in) is dict :
+                self.count_hash = dict_in
+            elif type(dict_in) is list :
+                self.count_hash = {}
+                for i, num in enumerate(dict_in) :
+                    self.count_hash[i + listStart] = num
+    def __len__(self):
+        return len(self.count_hash)
+    def get(self, name) :
+        if not name in self.count_hash :
+            return 0
+        else :
+            return self.count_hash[name]
     def count(self, name, value = 1) :
         if not name in self.count_hash :
             self.count_hash[name] = 0
@@ -96,6 +105,10 @@ class Counter :
             if not key in self.count_hash :
                 self.count_hash[key] = 0
             self.count_hash[name] += another[key]
+    def getSortedList(self, least=True) :
+        ret_list = [(key, self.count_hash[key]) for key in self.count_hash if least is True or self.count_hash[key] >= least]
+        ret_list = sorted(ret_list, key=lambda x:x[1], reverse=True)
+        return ret_list
 
 # tools
 def combineCountDict(base, add) :

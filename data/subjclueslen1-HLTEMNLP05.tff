@@ -2754,7 +2754,7 @@ type=strongsubj len=1 word1=false pos1=anypos stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=falsehood pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=falsely pos1=anypos stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=falsify pos1=verb stemmed1=y priorpolarity=negative
-type=strongsubj len=1 len=1 word1=falter pos1=verb stemmed1=y priorpolarity=negative
+type=strongsubj len=1 word1=falter pos1=verb stemmed1=y priorpolarity=negative
 type=weaksubj len=1 word1=famed pos1=adj stemmed1=n priorpolarity=positive
 type=weaksubj len=1 word1=familiar pos1=adj stemmed1=n priorpolarity=neutral
 type=weaksubj len=1 word1=familiar pos1=anypos stemmed1=y priorpolarity=neutral
@@ -3746,7 +3746,7 @@ type=weaksubj len=1 word1=impartiality pos1=noun stemmed1=n priorpolarity=positi
 type=weaksubj len=1 word1=impartially pos1=adverb stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=impasse pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=impassioned pos1=adj stemmed1=n priorpolarity=positive
-type=weaksubj len=1 word1=impassive pos1=adj stemmed1=n polarity=negative priorpolarity=weakneg
+type=weaksubj len=1 word1=impassive pos1=adj stemmed1=n polarity=negative
 type=strongsubj len=1 word1=impatience pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=impatient pos1=adj stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=impatiently pos1=adverb stemmed1=n priorpolarity=negative
@@ -3829,8 +3829,8 @@ type=weaksubj len=1 word1=impressions pos1=noun stemmed1=n priorpolarity=positiv
 type=strongsubj len=1 word1=impressive pos1=adj stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=impressively pos1=anypos stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=impressiveness pos1=noun stemmed1=n priorpolarity=positive
-type=weaksubj len=1 len=1 word1=imprison pos1=verb stemmed1=y priorpolarity=negative
-type=weaksubj len=1 len=1 word1=imprisonment pos1=noun stemmed1=n priorpolarity=negative
+type=weaksubj len=1 word1=imprison pos1=verb stemmed1=y priorpolarity=negative
+type=weaksubj len=1 word1=imprisonment pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=improbability pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=improbable pos1=adj stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=improbably pos1=adverb stemmed1=n priorpolarity=negative
@@ -4978,8 +4978,8 @@ type=weaksubj len=1 word1=miss pos1=verb stemmed1=y priorpolarity=negative
 type=strongsubj len=1 word1=misstatement pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=mistake pos1=adj stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=mistake pos1=noun stemmed1=n priorpolarity=negative
-type=strongsubj len=1 len=1 word1=mistaken pos1=verb stemmed1=y priorpolarity=negative
-type=strongsubj len=1 len=1 word1=mistakenly pos1=adverb stemmed1=n priorpolarity=negative
+type=strongsubj len=1 word1=mistaken pos1=verb stemmed1=y priorpolarity=negative
+type=strongsubj len=1 word1=mistakenly pos1=adverb stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=mistakes pos1=adj stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=mistakes pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=mistrust pos1=adj stemmed1=n priorpolarity=negative
@@ -5310,7 +5310,7 @@ type=strongsubj len=1 word1=optimal pos1=adj stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=optimism pos1=noun stemmed1=n priorpolarity=positive
 type=weaksubj len=1 word1=optimistic pos1=adj stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=opulent pos1=adj stemmed1=n priorpolarity=positive
-type=strongsubj len=1 len=1 word1=ordeal pos1=noun stemmed1=n priorpolarity=negative
+type=strongsubj len=1 word1=ordeal pos1=noun stemmed1=n priorpolarity=negative
 type=weaksubj len=1 word1=orderly pos1=adj stemmed1=n priorpolarity=positive
 type=weaksubj len=1 word1=original pos1=adj stemmed1=n priorpolarity=positive
 type=weaksubj len=1 word1=originality pos1=noun stemmed1=n priorpolarity=positive
@@ -5546,8 +5546,8 @@ type=strongsubj len=1 word1=pertinacity pos1=noun stemmed1=n priorpolarity=negat
 type=weaksubj len=1 word1=pertinent pos1=adj stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=perturb pos1=verb stemmed1=y priorpolarity=negative
 type=strongsubj len=1 word1=perturbed pos1=adj stemmed1=n priorpolarity=negative
-type=strongsubj len=1 word1=pervasive pos1=adj stemmed1=n m priorpolarity=negative
-type=strongsubj len=1 word1=pervasive pos1=noun stemmed1=n m priorpolarity=negative
+type=strongsubj len=1 word1=pervasive pos1=adj stemmed1=n priorpolarity=negative
+type=strongsubj len=1 word1=pervasive pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=perverse pos1=adj stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=perversely pos1=anypos stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=perversion pos1=noun stemmed1=n priorpolarity=negative
@@ -6235,7 +6235,7 @@ type=strongsubj len=1 word1=resentment pos1=adj stemmed1=n priorpolarity=negativ
 type=strongsubj len=1 word1=resentment pos1=noun stemmed1=n priorpolarity=negative
 type=weaksubj len=1 word1=reservations pos1=adj stemmed1=n priorpolarity=negative
 type=weaksubj len=1 word1=reservations pos1=noun stemmed1=n priorpolarity=negative
-type=weaksubj len=1 len=1 word1=resignation pos1=noun stemmed1=n priorpolarity=negative
+type=weaksubj len=1 word1=resignation pos1=noun stemmed1=n priorpolarity=negative
 type=weaksubj len=1 word1=resigned pos1=adj stemmed1=n priorpolarity=negative
 type=weaksubj len=1 word1=resilient pos1=adj stemmed1=n priorpolarity=positive
 type=weaksubj len=1 word1=resistance pos1=adj stemmed1=n priorpolarity=negative
@@ -7075,7 +7075,7 @@ type=weaksubj len=1 word1=strike pos1=verb stemmed1=y priorpolarity=negative
 type=strongsubj len=1 word1=striking pos1=adj stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=strikingly pos1=anypos stemmed1=n priorpolarity=positive
 type=weaksubj len=1 word1=stringent pos1=adj stemmed1=n priorpolarity=negative
-type=weaksubj len=1 word1=stringently pos1=adverb stemmed1=n priorpolarity=negative mpqapolarity=strongneg
+type=weaksubj len=1 word1=stringently pos1=adverb stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=striving pos1=adj stemmed1=n priorpolarity=positive
 type=strongsubj len=1 word1=striving pos1=noun stemmed1=n priorpolarity=positive
 type=weaksubj len=1 word1=strong pos1=adj stemmed1=n priorpolarity=positive
@@ -7293,7 +7293,7 @@ type=weaksubj len=1 word1=tardy pos1=adj stemmed1=n priorpolarity=negative
 type=weaksubj len=1 word1=tarnish pos1=verb stemmed1=y priorpolarity=negative
 type=weaksubj len=1 word1=taste pos1=noun stemmed1=n priorpolarity=positive
 type=weaksubj len=1 word1=taste pos1=verb stemmed1=y priorpolarity=neutral
-type=strongsubj len=1 len=1 word1=tattered pos1=anypos stemmed1=n priorpolarity=negative
+type=strongsubj len=1 word1=tattered pos1=anypos stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=taunt pos1=noun stemmed1=n priorpolarity=negative
 type=strongsubj len=1 word1=taunt pos1=verb stemmed1=y priorpolarity=negative
 type=strongsubj len=1 word1=taunting pos1=anypos stemmed1=n priorpolarity=negative

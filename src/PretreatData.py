@@ -83,28 +83,28 @@ def getData(Type) :
 
     
     sample    = loadDataFile(path_sample, Type+'_sample')
-    sample_en = translate(sample, google_translate_CtoE)
-    #print len(sample)
     writeListofDict(output_head+'sample_cn' , sample)
+    sample_en = translate(sample, google_translate_CtoE)
     writeListofDict(output_head+'sample_en' , sample_en)
+    #print len(sample)
 
     train     = loadDataFile(path_train, Type+'_train')
-    train_cn  = translate(train, google_translate_EtoC)
-    #print len(train)
-    writeListofDict(output_head+'train_cn'  , train_cn)
     writeListofDict(output_head+'train_en'  , train)
+    train_cn  = translate(train, google_translate_EtoC)
+    writeListofDict(output_head+'train_cn'  , train_cn)
+    #print len(train)
 
     unlabel   = loadDataFile(path_unlabel, Type+'_unlabel')
-    unlabel_en= translate(unlabel, google_translate_CtoE)
-    #print len(unlabel)
     writeListofDict(output_head+'unlabel_cn', unlabel)
+    unlabel_en= translate(unlabel, google_translate_CtoE)
     writeListofDict(output_head+'unlabel_en', unlabel_en)    
+    #print len(unlabel)
 
     test      = loadDataFile(path_test, Type+'_test')
+    writeListofDict(output_head+'test_cn'   , test)   
     test_en   = translate(test, google_translate_CtoE)
-    #print len(test)
-    writeListofDict(output_head+'test_cn'   , test)                                                                                                             
     writeListofDict(output_head+'test_en'   , test_en)
+    #print len(test)
 
 
 
